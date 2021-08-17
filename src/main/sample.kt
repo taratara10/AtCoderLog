@@ -1,7 +1,8 @@
 package main
 
 fun main(args:Array<String>){
-    println(charset(" "))
+    val b = "B"
+    println("")
 
-
+    charset(" ")
 }

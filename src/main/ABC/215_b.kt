@@ -1,5 +1,6 @@
 package main.ABC
 
+import java.util.*
 import kotlin.math.log2
 
 //問題
@@ -17,4 +18,6 @@ fun main(){
 fun sub(){
     val n = readLine()!!.toDouble()
     println(log2(n).toInt())
+
+
 }

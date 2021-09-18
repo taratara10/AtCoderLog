@@ -82,7 +82,7 @@ fun translateTopLeft(n: Int, s: List<List<Char>>): List<List<Char>> {
 fun trim( s: List<List<Char>>): List<List<Char>> {
     val trim = mutableListOf<List<Char>>()
 
-    //左辺を取り除く
+    //左辺の'.'を取り除く
     for (i in s.indices){
         val c = s[i].dropLastWhile { it == '.' }
         trim += c.ifEmpty { listOf() }

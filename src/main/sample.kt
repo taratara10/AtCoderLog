@@ -5,6 +5,6 @@ import java.util.*
 
 fun main(args:Array<String>){
 
-    println(listOf("a","b","c").joinToString(separator = ""))
-    //abc
+    val l = listOf(listOf(1,2), listOf(1,3), listOf(2,4))
+
 }

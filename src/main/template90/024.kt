@@ -9,6 +9,8 @@ fun main(args: Array<String>) {
     for (i in 0 until n ){
         sum += Math.abs(a[i] - b[i])
     }
-
-    println(if ((k - sum)%2 == 0) "Yes" else "No")
+    val ans =
+        if ((k - sum)%2 == 0 && k >= sum) "Yes"
+        else "No"
+    println(ans)
 }

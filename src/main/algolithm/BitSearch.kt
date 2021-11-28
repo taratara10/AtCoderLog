@@ -5,8 +5,6 @@ fun main(args:Array<String>){
     println(generateBitSearch(3))
 }
 
-
-
 fun generateBitSearch(n: Int): List<List<Boolean>>{
     val bitList = mutableListOf<List<Boolean>>()
     for (bit in 0 until (1 shl n)){

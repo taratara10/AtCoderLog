@@ -11,12 +11,10 @@ fun newPuzzle(data: List<String>) {
     val rows = getCandidates(rowData, colData.size)
     val cols = getCandidates(colData, rowData.size)
 
-    do {
-        val numChanged = reduceMutual(cols, rows)
-        if (numChanged == -1) {
-            println("No solution")
-            return
-        }
+    val numChanged = reduceMutual(cols, rows)
+    if (numChanged == -1) {
+        println("No solution")
+        return
     }
     while (numChanged > 0)
 
@@ -68,13 +66,6 @@ fun genSequence(ones: List<String>, numZeros: Int): List<String> {
     return result
 }
 
-/* If all the candidates for a row have a value in common for a certain cell,
-    then it's the only possible outcome, and all the candidates from the
-    corresponding column need to have that value for that cell too. The ones
-    that don't, are removed. The same for all columns. It goes back and forth,
-    until no more candidates can be removed or a list is empty (failure).
-*/
-// 誤った
 fun reduceMutual(cols: BitSets, rows: BitSets): Int {
     val countRemoved1 = reduce(cols, rows)
     if (countRemoved1 == -1) return -1
